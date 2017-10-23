@@ -1,0 +1,12 @@
+<!-- 
+<mat-grid-list cols="6" rowHeight="5:1">
+  <mat-grid-tile [colspan]="5">1</mat-grid-tile>
+  <mat-grid-tile [colspan]="1">1</mat-grid-tile>
+</mat-grid-list> -->
+<mat-toolbar color="primary">
+  <button mat-icon-button mat-mini-fab (click)="this.sidenav.menu.toggle()">
+    <mat-icon class="menu">menu</mat-icon>
+  </button>
+  <div class="logo">{{title}}</div>
+  
+</mat-toolbar>
