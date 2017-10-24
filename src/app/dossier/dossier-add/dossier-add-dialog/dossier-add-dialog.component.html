@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Add dossier</h1>
+
+    <table cellspacing="0">
+
+            <mat-form-field>
+                <input matInput placeholder="Name" #name>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="LastName" #lastname>
+            </mat-form-field>
+    </table>
+      <button mat-raised-button (click)="dialogRef.close({
+        name: name.value, lastname: lastname.value
+      })">Save</button>
+      <button mat-raised-button (click)="dialogRef.close()">Close</button>

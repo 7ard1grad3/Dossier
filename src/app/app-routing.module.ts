@@ -1,11 +1,12 @@
-import { HomeComponent } from './core/home/home.component';
+import { DossierRoutingModule } from './dossier/dossier-routing.module';
+import { DossierModule } from './dossier/dossier.module';
+import { DossierComponent } from './dossier/dossier.component';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 /* Base routing file */
 const routes: Routes = [
-    { path: '', component: HomeComponent, pathMatch: 'full' },
-
+    { path: '', loadChildren: './dossier/dossier.module#DossierModule', pathMatch: 'full' },
 ];
 
 @NgModule({

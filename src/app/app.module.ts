@@ -1,3 +1,5 @@
+import { DossierService } from './dossier/dossier.service';
+import { DossierModule } from './dossier/dossier.module';
 import { ConfigsService } from './core/configs.service';
 
 import { SidenavService } from './core/sidenav/sidenav.service';
@@ -14,9 +16,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    CoreModule
+    CoreModule,
+    DossierModule
   ],
-  providers: [SidenavService, ConfigsService],
+  providers: [SidenavService, ConfigsService, DossierService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,13 @@
+<ol>
+    <li>
+      <mat-form-field>
+        <input matInput [(value)]="name" placeholder="What's your name?">
+      </mat-form-field>
+    </li>
+    <li>
+      <button mat-raised-button (click)="openDialog()">Pick one</button>
+    </li>
+    <li *ngIf="lastname">
+      You chose: <i>{{lastname}}</i>
+    </li>
+</ol>

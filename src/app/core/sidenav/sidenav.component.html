@@ -1,10 +1,10 @@
 <mat-sidenav #sidenav mode="over" align="end">
         <div class="sidenav-content">
         <mat-nav-list>
-            <a mat-list-item mat-item (click)="sidenav.close()"> Test 1 </a>
-            <a mat-list-item mat-item (click)="sidenav.close()"> Test 2 </a>
+            <a mat-list-item mat-item active routerLink="/" routerLinkActive="active"><mat-icon>receipt</mat-icon> List Dossier </a>
+            <a mat-list-item mat-item routerLink="/new" routerLinkActive="active"><mat-icon>add</mat-icon> New Dossier </a>
             <mat-divider></mat-divider>
-            <button mat-button (click)="sidenav.close()">{{'close' | uppercase}}</button>
+            <button mat-button (click)="sidenav.close()"><mat-icon>close</mat-icon> {{'close' | uppercase}}</button>
         </mat-nav-list>
       </div>
 </mat-sidenav>
