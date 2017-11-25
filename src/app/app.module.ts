@@ -1,3 +1,5 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { StoreDataService } from './shared/store_data.service';
 import { DossierService } from './dossier/dossier.service';
 import { DossierModule } from './dossier/dossier.module';
 import { ConfigsService } from './core/configs.service';
@@ -16,10 +18,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     CoreModule,
     DossierModule
   ],
-  providers: [SidenavService, ConfigsService, DossierService],
+  providers: [SidenavService, ConfigsService, DossierService, StoreDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

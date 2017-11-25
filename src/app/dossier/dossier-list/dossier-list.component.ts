@@ -1,6 +1,6 @@
 
 import { ActivatedRoute, Router } from '@angular/router';
-import { IDossier } from '../dossier.model';
+import { Dossier } from '../dossier.model';
 import { DossierService } from './../dossier.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,11 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DossierListComponent implements OnInit {
 
-  dossiers: IDossier[];
+  dossiers: Dossier[];
   constructor(private _dossierService: DossierService, private _router: Router, private _activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.dossiers = this._dossierService.getDossier();
+
+/*       this._dossierService.dossierChanged.subscribe(
+          (dossiers: Dossier[]) => {
+              this._storeDataService.storeDossiers(dossiers);
+          } */
+
+
   }
 
   add() {
